@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <section class="min-h-screen flex items-center justify-center drop-shadow-lg round">
+        <div class="calculator w-[450px] rounded-[30px] drop-shadow-lg">
+            <header class="p-5 text-center font-bold text-yellow-200 text-2xl bg-blue-600">Calculadora</header>
+            <div class="screen min-h-[88px] p-3 text-right bg-blue-400">
+                <span class="expressao block font-bold text-white text-2xl"></span>
+                <span class="resultado block font-bold text-white text-2xl">=</span>
+            </div>
+            <div class="body w-full h-full p-5 grid grid-cols-4 gap-4 bg-blue-600">
+                <div class="button flex justify-center items-center" data-type="operador">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center"></span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="parenteses">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center"></span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="parenteses">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center"></span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="operador">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">÷</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">7</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">8</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">9</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="operador">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">x</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">4</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">5</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">6</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="operador">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">-</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">1</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">2</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">3</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="operador">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">+</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="zerar">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">Zerar</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="numero">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">0</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="decimais">
+                    <span class="p-6 bg-blue-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">.</span>
+                </div>
+                <div class="button flex justify-center items-center" data-type="resultado">
+                    <span class="p-6 bg-orange-400 border-blue-900 border-2 border-solid font-bold text-2xl rounded-full min-h-[79px] min-w-[79px] flex justify-center">=</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+    let buttons = document.querySelectorAll(".button");
+    let expressao = document.querySelector(".expressao");
+    let resultado = document.querySelector(".resultado");
+    let resultadoValor = 0;
+    let elementText = '';
+
+    function calcularExpressao(expressao){
+        resultadoValor = eval(expressao);
+        console.log(resultadoValor);
+        resultado.textContent = "=" + resultadoValor;
+    }
+
+    function zerarCalculadora(){
+        expressao.textContent = 0;
+        resultado.textContent = "=";
+    }
+
+    function tratarString(string){
+        string = string.replace(/÷/g, "/");
+        return string = string.replace(/x/g, "*");
+    }
+
+    buttons.forEach( (element) => {
+        element.addEventListener("click", () => {
+            
+            if(element.getAttribute("data-type") == "zerar"){
+                zerarCalculadora();
+                return;
+            }else if(element.getAttribute("data-type") == "resultado"){
+                calcularExpressao(expressao.textContent);
+                return;
+            }
+
+
+            elementText = tratarString(element.children[0].textContent)
+
+            expressao.textContent = expressao.textContent + elementText;
+            
+
+
+        })
+    })
+
+    /*
+            if(element.getAttribute("data-type") == "resultado"){                
+                expressao = expressao.textContent.replace(/÷/g, "/");
+                expressao = expressao.replace(/x/g, "*");
+
+                resultado.textContent = "=" + eval(expressao);
+            }
+            
+            if(element.getAttribute("data-type") == "zerar"){
+                expressao.textContent = "";
+                resultado.textContent = "=";
+            }
+
+           
+
+            
+            if((element.getAttribute("data-type") == "zerar") == false){
+                expressao.textContent = expressao.textContent + element.children[0].textContent;
+            }
+
+    */
+
+
+</script>
